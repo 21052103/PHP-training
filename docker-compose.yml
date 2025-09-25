@@ -4,7 +4,7 @@ services:
     container_name: php-app
     volumes:
       - .:/var/www/html
-      - ./php.ini:/usr/local/etc/php/conf.d/php.ini   # cấu hình PHP session
+      - ./php.ini:/usr/local/etc/php/conf.d/php.ini 
     working_dir: /var/www/html/laravel
     depends_on:
       - mysql-db

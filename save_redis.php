@@ -1,10 +1,11 @@
 <?php
 header("Content-Type: application/json");
 
-$redis = new Redis();
-$redis->connect('redis', 6379); // host của Redis
 
-// Nhận dữ liệu từ POST JSON
+$redis = new Redis();
+$redis->connect('redis', 6379); 
+
+
 $input = json_decode(file_get_contents("php://input"), true);
 
 $key = $input['key'] ?? '';
